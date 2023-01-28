@@ -9,11 +9,11 @@ vector<int> find(vector<int> arr1, vector<int> arr2, int size, int& counter) {
 	vector<int> FinalArr;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			if (arr1[i] == arr2[j] && arr1[i] != -9999999 && arr2[j] != -9999999) {
+			if (arr1[i] == arr2[j] && arr1[i] != 2147483647 && arr2[j] != 2147483647) {
 				FinalArr.push_back(arr2[j]);
 				counter++;
-				arr1[i] = -9999999;
-				arr2[j] = -9999999;
+				arr1[i] = 2147483647;
+				arr2[j] = 2147483647;
 			}
 		}
 	}
